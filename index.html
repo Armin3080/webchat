@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="chat.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+</head>
+
+<body>
+
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="login-form">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+
+  <script>
+    document.getElementById("login-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      // Get username and password
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      // Simple check for valid credentials
+      if (username === "user" && password === "pass") {
+        // Save authentication status (for example, in localStorage)
+        localStorage.setItem("loggedIn", "true");
+        
+        // Redirect to index.html or your desired main page
+        window.location.href = "chat.html";
+      } else {
+        alert("Invalid credentials. Please try again.");
+      }
+    });
+
+  </script>
+</body>
+
+</html>

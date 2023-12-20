@@ -1,0 +1,19 @@
+body {
+    background-color: none;
+    color: rgb(21, 143, 0);
+    font-family: monospace;
+    text-align: center;
+    background-image: url(DC.jpg);
+}
+
+button {
+    font-family: Arial, sans-serif;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #00a708;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}

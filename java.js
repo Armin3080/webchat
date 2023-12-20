@@ -1,6 +1,6 @@
 const WebSocket = require('ws');
 
-const wss = new WebSocket.Server({ port: 11754 });
+const wss = new WebSocket.Server({ port: 8080 });
 
 wss.on('connection', function connection(ws) {
   ws.on('message', function incoming(message) {
@@ -13,7 +13,7 @@ wss.on('connection', function connection(ws) {
   });
 });
 
-const ws = new WebSocket('tcp://6.tcp.ngrok.io:11754'); // آدرس سرور WebSocket
+const ws = new WebSocket('ws://localhost:8080'); // آدرس سرور WebSocket
 
 // برقراری اتصال به WebSocket
 ws.addEventListener('open', function open() {
